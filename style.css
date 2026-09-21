@@ -1,0 +1,510 @@
+/* =========================================
+   GLOBAL STYLES
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #eef2f7;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.top-header {
+    background: linear-gradient(135deg, #172554, #2563eb);
+    color: white;
+    padding: 25px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.top-header h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.top-header p {
+    opacity: 0.9;
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.print-btn {
+    background: white;
+    color: #1d4ed8;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.print-btn:hover {
+    background: #e0e7ff;
+}
+
+.print-small-btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.add-btn {
+    background: #2563eb;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.add-btn:hover {
+    background: #1d4ed8;
+}
+
+.clear-btn {
+    width: 100%;
+    padding: 13px;
+    margin-top: 10px;
+    background: #dc2626;
+    color: white;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.clear-btn:hover {
+    background: #b91c1c;
+}
+
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.app-container {
+    max-width: 1500px;
+    margin: 30px auto;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+
+/* =========================================
+   FORM SECTION
+========================================= */
+
+.form-section,
+.preview-section {
+    min-width: 0;
+}
+
+.form-section > h2,
+.preview-header h2 {
+    margin-bottom: 15px;
+    color: #172554;
+}
+
+.form-card {
+    background: white;
+    border-radius: 12px;
+    padding: 22px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.08);
+}
+
+.form-card h3 {
+    margin-bottom: 18px;
+    color: #1e3a8a;
+}
+
+.input-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.input-group small {
+    color: #64748b;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   DYNAMIC FORM ITEMS
+========================================= */
+
+.dynamic-item {
+    border: 1px solid #dbeafe;
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.dynamic-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.dynamic-item-header strong {
+    color: #1e3a8a;
+}
+
+.remove-btn {
+    background: #fee2e2;
+    color: #b91c1c;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.remove-btn:hover {
+    background: #fecaca;
+}
+
+.dynamic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+
+/* =========================================
+   PREVIEW SECTION
+========================================= */
+
+.preview-section {
+    position: sticky;
+    top: 20px;
+    align-self: start;
+}
+
+.preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   RESUME PAPER
+========================================= */
+
+.resume-paper {
+    background: white;
+    width: 100%;
+    min-height: 1100px;
+    padding: 45px;
+
+    box-shadow: 0 5px 25px rgba(15, 23, 42, 0.12);
+
+    color: #1f2937;
+}
+
+
+/* =========================================
+   RESUME HEADER
+========================================= */
+
+.resume-header {
+    text-align: center;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 20px;
+    margin-bottom: 25px;
+}
+
+.resume-header h1 {
+    color: #172554;
+    font-size: 34px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.resume-header h2 {
+    color: #2563eb;
+    font-size: 19px;
+    font-weight: normal;
+    margin: 5px 0 15px;
+}
+
+.contact-info,
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 13px;
+}
+
+.social-links {
+    margin-top: 8px;
+    color: #2563eb;
+}
+
+
+/* =========================================
+   RESUME SECTIONS
+========================================= */
+
+.resume-section {
+    margin-bottom: 25px;
+}
+
+.resume-section h3 {
+    color: #1e3a8a;
+    border-bottom: 1px solid #cbd5e1;
+    padding-bottom: 5px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.resume-section p {
+    font-size: 14px;
+    color: #374151;
+}
+
+
+/* =========================================
+   SKILLS
+========================================= */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    background: #dbeafe;
+    color: #1e3a8a;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   EXPERIENCE / EDUCATION / PROJECTS
+========================================= */
+
+.preview-item {
+    margin-bottom: 18px;
+}
+
+.preview-item:last-child {
+    margin-bottom: 0;
+}
+
+.preview-item-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #111827;
+}
+
+.preview-item-subtitle {
+    font-size: 14px;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+.preview-date {
+    font-size: 12px;
+    color: #64748b;
+    margin: 3px 0 7px;
+}
+
+.preview-description {
+    font-size: 13px;
+    color: #374151;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #64748b;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .app-container {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-section {
+        position: static;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .top-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-header h1 {
+        font-size: 24px;
+    }
+
+    .input-grid,
+    .dynamic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-width {
+        grid-column: auto;
+    }
+
+    .section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .resume-paper {
+        padding: 25px;
+    }
+
+    .resume-header h1 {
+        font-size: 27px;
+    }
+
+}
+
+
+/* =========================================
+   PRINT STYLESHEET
+========================================= */
+
+@media print {
+
+    @page {
+        size: A4;
+        margin: 12mm;
+    }
+
+    body {
+        background: white;
+    }
+
+    .top-header,
+    .form-section,
+    .preview-header,
+    footer {
+        display: none !important;
+    }
+
+    .app-container {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .preview-section {
+        display: block;
+        position: static;
+    }
+
+    .resume-paper {
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .resume-section {
+        break-inside: avoid;
+    }
+
+    .preview-item {
+        break-inside: avoid;
+    }
+}
